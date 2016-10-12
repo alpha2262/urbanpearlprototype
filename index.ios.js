@@ -9,24 +9,40 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  MapView,
 } from 'react-native';
+
+class MapMyRide extends Component {
+  render() {
+    return (
+      <View>
+        <MapView
+        style={{height: 200, margin: 40}}
+        showsUserLocation={true}
+        followUserLocation={true}
+      />
+      </View>
+    )
+  }
+}
+
 
 export default class UrbanPearlPrototype extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to Urban Pearl!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, click here!
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+      return (
+        <View style={styles.container}>
+          <Text style={styles.welcome}>
+            Welcome to Urban Pearl!
+          </Text>
+          <Text style={styles.instructions}>
+            To get started, click here!
+          </Text>
+          <Text style={styles.instructions}>
+            Press Cmd+R to reload,{'\n'}
+            Cmd+D or shake for dev menu
+          </Text>
+        </View>
     );
   }
 }
