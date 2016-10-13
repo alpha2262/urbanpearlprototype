@@ -55,12 +55,23 @@ class ContactInfoInput extends Component {
     <View>
       <TextInput
         style={styles.center}
-        placeholder="hello"
+        placeholder="first name"
+        placeholderTextColor='red'
+        onChangeText={(text) => this.setState({text})}
+        value={this.state.text}
+        autoCapitalize={'words'}
+        clearButtonMode={'while-editing'}
+      />
+      <TextInput
+        style={styles.center}
+        placeholder="phone number"
+        placeholderTextColor='red'
         onChangeText={(text) => this.setState({text})}
         value={this.state.text}
       />
+
       <Text style={styles.center}>
-      {this.state.text}
+        {this.state.text}
       </Text>
     </View>
     )

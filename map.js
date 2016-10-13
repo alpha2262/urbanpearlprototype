@@ -1,11 +1,13 @@
 
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View,
   MapView,
+  Image,
+  TouchableOpacity,
 } from 'react-native';
 
 export default class MapMyRide extends Component {
@@ -19,7 +21,16 @@ export default class MapMyRide extends Component {
         }}
         showsUserLocation={true}
         followUserLocation={true}
-      />
+        mapType={'hybrid'}
+        pitchEnabled={true}
+        region={{
+          latitude: 48.628611,
+          longitude: -121.831389,
+          latitudeDelta: 100,
+          longitudeDelta: 100,
+        }}
+      >
+      </MapView>
       </View>
     )
   }
