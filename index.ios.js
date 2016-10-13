@@ -9,6 +9,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  TextInput,
   View,
   MapView,
 } from 'react-native';
@@ -20,10 +21,11 @@ export default class UrbanPearlPrototype extends Component {
   render() {
       return (
         <View>
-        <MapMyRide />
+          <MapMyRide />
           <Text style={styles.welcome}>
             Welcome to Urban Pearl!
           </Text>
+          <ContactInfoInput/>
           <Text style={styles.instructions}>
             To get started, click here!
           </Text>
@@ -43,6 +45,27 @@ export default class UrbanPearlPrototype extends Component {
   }
 }
 
+class ContactInfoInput extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {text: ''}
+  }
+  render () {
+    return (
+    <View>
+      <TextInput
+        style={styles.center}
+        placeholder="hello"
+        onChangeText={(text) => this.setState({text})}
+        value={this.state.text}
+      />
+      <Text style={styles.center}>
+      {this.state.text}
+      </Text>
+    </View>
+    )
+  }
+}
 
 
 class Greeting extends Component {
@@ -88,6 +111,7 @@ const styles = StyleSheet.create({
   center: {
     textAlign: 'center',
     color: 'orange',
+    height: 40,
   },
 });
 

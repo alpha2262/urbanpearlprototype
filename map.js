@@ -13,7 +13,10 @@ export default class MapMyRide extends Component {
     return (
       <View>
         <MapView
-        style={{height: 200, margin: 40}}
+        style={{
+          height: 200,
+          margin: 40
+        }}
         showsUserLocation={true}
         followUserLocation={true}
       />
