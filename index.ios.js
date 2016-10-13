@@ -13,20 +13,8 @@ import {
   MapView,
 } from 'react-native';
 
-class MapMyRide extends Component {
-  render() {
-    return (
-      <View>
-        <MapView
-        style={{height: 200, margin: 40}}
-        showsUserLocation={true}
-        followUserLocation={true}
-      />
-      </View>
-    )
-  }
-}
-
+import About from './about.js'
+import MapMyRide from './map.js'
 
 export default class UrbanPearlPrototype extends Component {
   render() {
@@ -46,10 +34,39 @@ export default class UrbanPearlPrototype extends Component {
           <Text>
             For more information, click here.
           </Text>
+          <Greeting>
+
+          </Greeting>
+          <About />
         </View>
     );
   }
 }
+
+
+
+class Greeting extends Component {
+  render() {
+    return (
+      <Text style={styles.center}>
+        Hello {this.props.name} and welcome to Urban Pearl!
+      </Text>
+    )
+  }
+}
+
+class Name extends Component {
+  render () {
+    return (
+    <View style={{alignItems: 'center'}}>
+      <Greeting name = 'Mike' />
+      <Greeting name = 'Bob' />
+    </View>
+    )
+  }
+}
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -67,6 +84,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
+  },
+  center: {
+    textAlign: 'center',
+    color: 'orange',
   },
 });
 
