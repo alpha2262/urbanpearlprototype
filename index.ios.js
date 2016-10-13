@@ -31,7 +31,8 @@ class MapMyRide extends Component {
 export default class UrbanPearlPrototype extends Component {
   render() {
       return (
-        <View style={styles.container}>
+        <View>
+        <MapMyRide />
           <Text style={styles.welcome}>
             Welcome to Urban Pearl!
           </Text>
@@ -41,6 +42,9 @@ export default class UrbanPearlPrototype extends Component {
           <Text style={styles.instructions}>
             Press Cmd+R to reload,{'\n'}
             Cmd+D or shake for dev menu
+          </Text>
+          <Text>
+            For more information, click here.
           </Text>
         </View>
     );

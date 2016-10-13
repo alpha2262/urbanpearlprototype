@@ -15,7 +15,7 @@ import {
 export default class UrbanPearlPrototype extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Text style={styles.welcome}>
           Welcome to React Native!
         </Text>
@@ -25,6 +25,9 @@ export default class UrbanPearlPrototype extends Component {
         <Text style={styles.instructions}>
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
+        </Text>
+        <Text style={styles.instructions}>
+          More information can be found here.
         </Text>
       </View>
     );
