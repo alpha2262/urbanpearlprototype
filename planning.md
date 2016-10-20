@@ -3,13 +3,10 @@ Planning doc
 
 
 
-onSubmitEditing
-
-
-
 structure:
 welcome screen
-*
+* main map page (seen map screen section)
+* sign up page
 
 
 map screen:

@@ -16,12 +16,14 @@ import {
 
 import About from './about.js'
 import MapMyRide from './map.js'
+import CoverImage from './coverImage.js'
 
 export default class UrbanPearlPrototype extends Component {
   render() {
       return (
         <View>
           <MapMyRide />
+          <CoverImage/>
           <Text style={styles.welcome}>
             Welcome to Urban Pearl!
           </Text>
