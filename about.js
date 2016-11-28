@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
+  TouchableHighlight,
   Text,
   View,
 } from 'react-native'
@@ -10,9 +11,16 @@ import {
 export default class About extends Component {
   render() {
     return (
-      <Text>
-        About us page
-      </Text>
+      <View>
+        <TouchableHighlight
+          onPress={this._onPressButton}
+          underlayColor={'red'}
+          >
+          <Text>
+          About us page
+          </Text>
+        </TouchableHighlight>
+      </View>
     )
   }
 }

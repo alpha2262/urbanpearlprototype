@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 import React, { Component } from 'react';
 import {
@@ -10,13 +10,12 @@ import {
 } from 'react-native'
 
 export default class CoverImage extends Component {
-  redner () {
+  render () {
     return (
       <View>
         <Image
-          style={{opacity:.5}}
-          source={{uri: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAKlAAAAJDcyYTY1YTRmLTBhNDQtNGFhYS1hMWNkLWI3MWMwZDAxNWNiMQ.jpg'}}
-          resizeMode={'cover'}
+          source={{uri: 'https://github.com/alpha2262/alpha2262.github.io/blob/master/images/BuildingsMap1.png'}}
+
         />
 
       </View>

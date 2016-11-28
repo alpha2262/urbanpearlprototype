@@ -29,8 +29,8 @@ export default class MapMyRide extends Component {
           latitudeDelta: 100,
           longitudeDelta: 100,
         }}
-      >
-      </MapView>
+      />
+      
       </View>
     )
   }

@@ -1,14 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  Image,
   TextInput,
   View,
   MapView,
@@ -16,17 +11,17 @@ import {
 
 import About from './about.js'
 import MapMyRide from './map.js'
+import NavList from './navigation.js'
 import CoverImage from './coverImage.js'
 
 export default class UrbanPearlPrototype extends Component {
   render() {
       return (
         <View>
-          <MapMyRide />
-          <CoverImage/>
           <Text style={styles.welcome}>
             Welcome to Urban Pearl!
           </Text>
+
           <ContactInfoInput/>
           <Text style={styles.instructions}>
             To get started, click here!
@@ -38,10 +33,12 @@ export default class UrbanPearlPrototype extends Component {
           <Text>
             For more information, click here.
           </Text>
-          <Greeting>
-
-          </Greeting>
+          <CoverImage/>
+            <Greeting/>
+          
+          <MapMyRide />
           <About />
+
         </View>
     );
   }
@@ -64,6 +61,9 @@ class ContactInfoInput extends Component {
         autoCapitalize={'words'}
         clearButtonMode={'while-editing'}
       />
+      <Text style={styles.center}>
+        {this.state.text}
+      </Text>
       <TextInput
         style={styles.center}
         placeholder="phone number"
